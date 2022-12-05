@@ -1,0 +1,42 @@
+swagger: "2.0"
+info:
+  description: "Banking application to model saving account operations"
+  version: "0.0.1"
+  title: "khazaddum"
+  contact:
+    email: "km3ll@protonmail.com"
+host: "localhost:8080"
+basePath: "/"
+tags:
+  - name: "status"
+    description: "Application's heartbeat"
+  - name: "account"
+    description: "Operations about saving accounts"
+schemes:
+  - "http"
+paths:
+  /status:
+    get:
+      tags:
+        - "status"
+      summary: "Get application running status"
+      description: ""
+      operationId: "getStatus"
+      produces:
+        - "application/json"
+      responses:
+        "200":
+          description: "Success"
+          schema:
+            $ref: '#/definitions/GetStatusResponse'
+definitions:
+  GetStatusResponse:
+    type: "object"
+    properties:
+      dateTime:
+        type: "string"
+      message:
+        type: "string"
+    example:
+      dateTime: "2022-05-09T17:23:58.566-05:00[America/Bogota]"
+      message: "UP!"
