@@ -1,1 +1,1 @@
-# Scala-HTTP
+# scala-http
