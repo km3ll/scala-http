@@ -7,3 +7,4 @@ libraryDependencies ++= SbtDependencies.http
 scalacOptions ++= SbtOptions.compiler
 
 addCommandAlias( "check", "clean; update; compile; test:compile; test")
+addCommandAlias( "coverage", "clean; compile; test:compile; coverage; test; coverageReport")
