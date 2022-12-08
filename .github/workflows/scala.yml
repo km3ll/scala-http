@@ -20,13 +20,3 @@ jobs:
         distribution: 'temurin'
     - name: check
       run: sbt clean update compile test:compile test
-    - name: compile
-      run: sbt compile test:compile
-    - name: module-domain
-      run: sbt domain/test
-    - name: module-event
-      run: sbt event/test
-    - name: module-http
-      run: sbt http/test
-    - name: module-persistence
-      run: sbt persistence/test
